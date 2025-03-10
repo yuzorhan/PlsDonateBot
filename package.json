@@ -1,0 +1,8 @@
+{
+  "name": "pls-donate-bot",
+  "version": "1.0.0",
+  "dependencies": {
+    "noblox.js": "^4.14.0",
+    "express": "^4.17.1"
+  }
+}
