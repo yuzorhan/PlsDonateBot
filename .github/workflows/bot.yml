@@ -1,0 +1,20 @@
+name: Run Pls Donate Bot
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Restarts every 6 hours
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm install
+      - name: Run bot
+        run: node bot.js
